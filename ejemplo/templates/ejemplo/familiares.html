@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends 'ejemplo/base.html' %}
 
-</head>
-<body>
+{% block titulo %}
+    Lista de todos los Familiares
+{% endblock %}
 
-    <h1>Lista de mis familiares</h1>
-
+{% block contenido %}
     {% for familiar in lista_familiares %}
         <ul>
             <li style="line-height: 50px;"> Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}}, Pasaporte: {{familiar.numero_pasaporte}}, Nacimiento: {{familiar.fecha_nacimiento}}</li>
         </ul>
     {% endfor %}
-    
-</body>
-</html>
+{% endblock %}   
