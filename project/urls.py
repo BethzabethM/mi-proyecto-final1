@@ -23,4 +23,5 @@ urlpatterns = [
         path('mi-familia/', mostrar_familiares),
         path('blog/', blog_index),
         path('mi-familia/buscar', BuscarFamiliar.as_view()),
+        path('mi-familia/alta', AltaFamiliar.as_view()),
 ]
