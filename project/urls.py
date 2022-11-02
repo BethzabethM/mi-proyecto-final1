@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ejemplo.views import mostrar_familiares
+from blog.views import index as blog_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mi-familia/', mostrar_familiares),
+        path('mi-familia/', mostrar_familiares),
+        path('blog/', blog_index),
 ]
